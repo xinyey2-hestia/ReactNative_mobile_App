@@ -1,9 +1,9 @@
 import React from 'react';
-import ProfileScreen from '../Home';
+import FollowerScreen from '../components/Follower';
 
 import renderer from 'react-test-renderer';
 
-test('renders correctly', () => {
-  const tree = renderer.create(<ProfileScreen/>).toJSON();
-  expect(tree.length).not.toBe(2);
+it('renders without crashing', () => {
+ const rendered = renderer.create(<FollowerScreen />).toJSON();
+  expect(rendered).toBeTruthy();
 });
